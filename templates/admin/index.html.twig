@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Homepage{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>Admin homepage</h1>
+
+        <p>
+            Welcome to the Admin homepage
+        </p>
+
+        <div class="row">
+
+            {% for coffee in coffees %}
+                {% if coffee.status == 'private' %}
+                    <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="{{ coffee.image }}"/>
+                            <h3>{{ coffee.title }}</h3>
+                            <p>{{ coffee.summary }}</p>
+                            <p>{{ coffee.description }}</p>
+                            <p>{{ coffee.ingredientsList }}</p>
+                            <p>€{{ coffee.priceRange }}</p>
+                        </div>
+
+                    </div>
+                {% endif %}
+
+            {% else %}
+                <tr>
+                    <td colspan="8">no records found</td>
+                </tr>
+            {% endfor %}
+
+        </div>
+    </div>
+
+{% endblock %}

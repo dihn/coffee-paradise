@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Review{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1>Review</h1>
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <td>{{ review.id }}</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>{{ review.author }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ review.date|date("y/m/d") }}</td>
+            </tr>
+            <tr>
+                <th>Summary</th>
+                <td>{{ review.summary }}</td>
+            </tr>
+            <tr>
+                <th>Retailers</th>
+                <td>{{ review.retailers }}</td>
+            </tr>
+            <tr>
+                <th>PricePaid</th>
+                <td>{{ review.pricePaid }}</td>
+            </tr>
+            <tr>
+                <th>NumStars</th>
+                <td>{{ review.numStars }}</td>
+            </tr>
+
+        </table>
+
+        <a href="{{ path('review_index') }}">back to list</a>
+
+        <a href="{{ path('review_edit', {'id': review.id}) }}">edit</a>
+
+        {% include 'review/_delete_form.html.twig' with {'identifier': review.id} only %}
+
+    </div>
+
+{% endblock %}

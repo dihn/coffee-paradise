@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coffee index{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1>Coffee homepage</h1>
+
+        <p>
+            Welcome to the coffee homepage
+        </p>
+
+        <div class="row">
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                {% for coffee in coffees %}
+                <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+                    <div class="thumbnail">
+                        <img src="/images/{{ coffee.image }}" class="img-thumbnail"/>
+                        <h3>{{ coffee.title }}</h3>
+                        <p>{{ coffee.status }}</p>
+                        <p>{{ coffee.author }}</p>
+                        <p>{{ coffee.summary }}</p>
+                        <p>{{ coffee.description }}</p>
+                        <p>{{ coffee.ingredientsList }}</p>
+                        <p>€{{ coffee.priceRange }}</p>
+                        <a href="{{ path('coffee_show', {'id': coffee.id}) }}">View Coffee</a>
+                    </div>
+
+                </div>
+
+            {% else %}
+                <tr>
+                    <td colspan="8">no Coffees found</td>
+                </tr>
+            {% endfor %}
+
+            {% else %}
+
+                {% for coffee in coffees %}
+                    {% if coffee.status == 'public' %}
+                        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+                            <div class="thumbnail">
+                                <img src="/images/{{ coffee.image }}" class="img-thumbnail"/>
+                                <h3>{{ coffee.title }}</h3>
+                                <p>{{ coffee.status }}</p>
+                                <p>{{ coffee.author }}</p>
+                                <p>{{ coffee.summary }}</p>
+                                <p>{{ coffee.description }}</p>
+                                <p>{{ coffee.ingredientsList }}</p>
+                                <p>€{{ coffee.priceRange }}</p>
+                                <a href="{{ path('coffee_show', {'id': coffee.id}) }}">View Coffee</a>
+                            </div>
+
+                        </div>
+                    {% endif %}
+
+                {% else %}
+                    <tr>
+                        <td colspan="8">no Coffees found</td>
+                    </tr>
+                {% endfor %}
+
+            {% endif %}
+
+
+
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

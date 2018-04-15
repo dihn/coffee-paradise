@@ -1,0 +1,39 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: dihn
+ * Date: 03/03/2018
+ * Time: 19:35
+ */
+
+namespace App\Controller;
+
+
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+
+use App\Entity\Coffee;
+
+/**
+ * Default controller class
+ * Class DefaultController
+ * @package App\Controller
+ */
+class DefaultController extends Controller
+{
+
+    /**
+     * Creates index page
+     * @Route("/", name="homepage")
+     */
+    public function index() {
+        $coffees = $this->getDoctrine()
+            ->getRepository(Coffee::class)
+            ->findAll();
+
+        return $this->render('default/homepage.html.twig', ['coffees' => $coffees]);
+    }
+
+}

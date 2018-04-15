@@ -1,0 +1,62 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: dihn
+ * Date: 23/03/2018
+ * Time: 23:59
+ */
+
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+use App\Entity\Member;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+
+/**
+ * Security controller
+ * Class SecurityController
+ * @package App\Controller
+ */
+class SecurityController extends Controller {
+
+    /**
+     * Password encoder
+     * @var UserPasswordEncoderInterface
+     */
+    private $encoder;
+
+    /**
+     * SecurityController constructor.
+     * @param UserPasswordEncoderInterface $encoder
+     */
+    public function __construct(UserPasswordEncoderInterface $encoder) {
+        $this->encoder = $encoder;
+    }
+
+    /**
+     * Secure the login
+     * @param Request $request
+     * @param AuthenticationUtils $authUtils
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/login", name="login")
+     */
+    public function login(Request $request, AuthenticationUtils $authUtils) {
+        // get the login error if there is one
+        $error = $authUtils->getLastAuthenticationError();
+
+        // last username entered by the user
+        $lastUsername = $authUtils->getLastUsername();
+
+        $template = 'security/login.html.twig';
+        $args = [
+            'last_username' => $lastUsername,
+            'error' => $error,
+        ];
+
+        return $this->render($template, $args);
+    }
+}

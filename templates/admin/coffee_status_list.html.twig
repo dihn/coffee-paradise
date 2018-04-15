@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coffee Status{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1>Coffee Status</h1>
+
+        <div class="row">
+
+            {% for coffee in coffees %}
+                {% if coffee.status == 'private' %}
+                    <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+                        <div class="thumbnail">
+                            <img src="/images/{{ coffee.image }}" class="img-thumbnail"/>
+                            <h3>{{ coffee.title }}</h3>
+                            <p>STATUS : {{ coffee.status }}</p>
+                            <p>{{ coffee.author }}</p>
+                            <p>{{ coffee.summary }}</p>
+                            <p>{{ coffee.description }}</p>
+                            <p>{{ coffee.ingredientsList }}</p>
+                            <p>€{{ coffee.priceRange }}</p>
+                            <a href="{{ path('coffee_show', {'id': coffee.id}) }}">View Coffee</a>
+                        </div>
+
+                    </div>
+                {% endif %}
+
+            {% else %}
+                <tr>
+                    <td colspan="8">no Coffees found</td>
+                </tr>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

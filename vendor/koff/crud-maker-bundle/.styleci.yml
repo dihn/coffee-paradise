@@ -1,0 +1,17 @@
+preset: symfony
+
+linting: true
+
+enabled:
+  - ordered_use
+  - strict
+  - short_array_syntax
+  - php_unit_construct
+  - phpdoc_order
+
+disabled:
+  - heredoc_to_nowdoc
+
+finder:
+  exclude:
+    - "tests"

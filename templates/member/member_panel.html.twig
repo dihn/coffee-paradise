@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Member Panel{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <h1>Member Panel</h1>
+
+        <ul>
+            <li><a href="{{ url('coffee_new') }}">Create a Coffee</a></li>
+            <li><a href="{{ url('member_coffee_list') }}">View My Coffees</a></li>
+            <li><a href="{{ url('member_review_list') }}">View My Reviews</a></li>
+        </ul>
+    </div>
+{% endblock %}

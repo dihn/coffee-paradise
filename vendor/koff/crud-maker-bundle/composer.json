@@ -1,0 +1,43 @@
+{
+    "name": "koff/crud-maker-bundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "keywords": ["generator", "code generator", "scaffolding", "scaffold", "crud generator"],
+    "description": "This bundle is extension to `symfony/maker-bundle`. It allows you to create simple crud with just one command.",
+    "authors": [
+        {
+            "name": "Sadicov Vladimir",
+            "homepage": "https://koff.pro"
+        }
+    ],
+    "require": {
+        "php": "^7.0.8",
+        "symfony/config": "^3.4|^4.0",
+        "symfony/console": "^3.4|^4.0",
+        "symfony/dependency-injection": "^3.4|^4.0",
+        "symfony/http-kernel": "^3.4|^4.0",
+        "symfony/maker-bundle": "<1.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.8",
+        "symfony/phpunit-bridge": "^3.4|^4.0",
+        "doctrine/orm": "^2.5.11"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": { "Koff\\Bundle\\CrudMakerBundle\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Koff\\Bundle\\CrudMakerBundle\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

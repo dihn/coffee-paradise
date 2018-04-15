@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1>Member LIST page</h1>
+
+        <a href="{{ path('member_new')}}">
+            Create new Member
+        </a>
+
+        <ul>
+            {% for member in members %}
+                <li
+                        {% if highlightId is defined %}
+                            {% if member.id == highlightId %}
+                                class="highlight"
+                            {% endif %}
+                        {% endif %}
+                >
+                    id = {{ member.id }}
+                    <br>
+                    Username: {{ member.username }}
+                    <br>
+                    <a href="{{ url('member_show', {id : member.id} ) }}">(details)</a>
+                    <br>
+                    <a href="{{ url('member_delete', {id : member.id} ) }}">(DELETE)</a>
+
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+{% endblock %}

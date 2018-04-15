@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Review Status Review{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+
+        <h1>Review Status Review</h1>
+
+        <div class="row">
+
+            {% for review in reviews %}
+                {% if review.status == 'private' %}
+                    <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
+                        <p>{{ review.status }}</p>
+                        <p>{{ review.author }}</p>
+                        <p>{{ review.summary }}</p>
+                    </div>
+                {% endif %}
+
+                {% else %}
+                    <p>No reviews up for status change</p>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
