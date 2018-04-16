@@ -8,10 +8,11 @@
 
         <h1>Coffee</h1>
 
+    <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
         <table>
             <tr>
-                <th>Id</th>
-                <td>{{ coffee.id }}</td>
+
+                <td><img src="/images/{{ coffee.image }}" class="img-thumbnail"/></td>
             </tr>
             <tr>
                 <th>Title</th>
@@ -20,10 +21,6 @@
             <tr>
                 <th>Summary</th>
                 <td>{{ coffee.summary }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ coffee.image }}</td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -63,6 +60,8 @@
 
 
         </table>
+
+    </div>
 
         <a href="{{ path('coffee_index') }}">Back to Coffees</a>
 

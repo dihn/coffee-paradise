@@ -11,7 +11,7 @@
         <div class="row">
 
             {% for review in reviews %}
-                {% if review.author == 'eddy' %}
+                {% if (review.author|lower == app.user.username) %}
                     <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
                         <p>{{ review.status }}</p>
                         <p>{{ review.author }}</p>

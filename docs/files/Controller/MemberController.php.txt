@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Member;
+use App\Entity\Coffee;
 use App\Form\MemberType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -54,6 +55,38 @@ class MemberController extends Controller
         $args = [
             'members' => $members,
             'highlightId' => $highlightId,
+        ];
+
+        return $this->render($template . '.html.twig', $args);
+    }// end listAction()
+
+    /**
+     * @Route("/member/coffees", name="member_coffee_list")
+     */
+
+    public function listActionCoffees() {
+        $coffeeRepo = $this->getDoctrine()->getRepository('App:Coffee');
+        $coffees = $coffeeRepo->findAll();
+
+        $template = 'member/member_coffee_list';
+        $args = [
+            'coffees' => $coffees,
+        ];
+
+        return $this->render($template . '.html.twig', $args);
+    }// end listAction()
+
+    /**
+     * @Route("/member/reviews", name="member_review_list")
+     */
+
+    public function listActionReviews() {
+        $reviewRepo = $this->getDoctrine()->getRepository('App:Review');
+        $reviews = $reviewRepo->findAll();
+
+        $template = 'member/member_review_list';
+        $args = [
+            'reviews' => $reviews,
         ];
 
         return $this->render($template . '.html.twig', $args);

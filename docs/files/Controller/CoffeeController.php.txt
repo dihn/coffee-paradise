@@ -10,6 +10,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\File\File;
 
 use App\Entity\Review;
 
@@ -41,6 +43,17 @@ class CoffeeController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $file = $coffee->getImage();
+
+            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+
+            $file->move(
+                $this->getParameter('images_directory'),
+                $fileName
+            );
+
+            $coffee->setImage($fileName);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($coffee);
             $em->flush();
@@ -107,6 +120,15 @@ class CoffeeController extends Controller
         $em->flush();
 
         return $this->redirectToRoute('coffee_index');
+    }
+
+    /**
+     * Generates unique filename for image uploaded by user
+     * @return string
+     *
+     */
+    private function generateUniqueFileName() {
+        return md5(uniqid());
     }
 }
 

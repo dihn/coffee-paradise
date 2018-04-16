@@ -16,8 +16,10 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 
+
 class MemberController extends Controller
 {
+
     /**
      * @Route("/member", name="member_index")
      *
@@ -103,6 +105,9 @@ class MemberController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // password and encoding
+            $encodedPassword = $this->encodePassword($member, $member->getPassword());
+            $member->setPassword($encodedPassword);
             $em = $this->getDoctrine()->getManager();
             $em->persist($member);
             $em->flush();

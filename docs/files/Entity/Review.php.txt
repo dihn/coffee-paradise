@@ -1,11 +1,17 @@
 <?php
+/**
+ *
+ * Review entity.
+ *
+ */
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * The Review Entity
+ * The Review Entity.
+ *
  * @ORM\Entity(repositoryClass="App\Repository\ReviewRepository")
  */
 class Review
@@ -184,8 +190,10 @@ class Review
     private $numStars;
 
     /**
+     * Sets up review relationship with coffees. onDelete is used to allow deletion avoiding foreign key errors
+     *
      * @ORM\ManyToOne(targetEntity="App\Entity\Coffee", inversedBy="reviews")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\JoinColumn(nullable=true, onDelete="cascade")
      */
     private $coffee;
 

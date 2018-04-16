@@ -1,11 +1,15 @@
 <?php
+/**
+ * Review entity.
+ */
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * The Review Entity
+ * The Review Entity.
+ *
  * @ORM\Entity(repositoryClass="App\Repository\ReviewRepository")
  */
 class Review

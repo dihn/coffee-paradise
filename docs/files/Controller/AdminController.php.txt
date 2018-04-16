@@ -42,4 +42,38 @@ class AdminController extends Controller {
         $args = [];
         return $this->render($template, $args);
     }
+
+    /**
+     * Lists the coffees for admin to view status'
+     * @Route("/admin/coffees", name="coffee_status_review")
+     */
+
+    public function listActionCoffees() {
+        $coffeeRepo = $this->getDoctrine()->getRepository('App:Coffee');
+        $coffees = $coffeeRepo->findAll();
+
+        $template = 'admin/coffee_status_list';
+        $args = [
+            'coffees' => $coffees,
+        ];
+
+        return $this->render($template . '.html.twig', $args);
+    }// end listAction()
+
+    /**
+     * Lists the coffees for admin to view reviews status'
+     * @Route("/admin/reviews", name="review_status_review")
+     */
+
+    public function listActionReviews() {
+        $reviewRepo = $this->getDoctrine()->getRepository('App:Review');
+        $reviews = $reviewRepo->findAll();
+
+        $template = 'admin/review_status_list';
+        $args = [
+            'reviews' => $reviews,
+        ];
+
+        return $this->render($template . '.html.twig', $args);
+    }// end listAction()
 }

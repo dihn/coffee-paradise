@@ -90,6 +90,18 @@ class __TwigTemplate_50bcc1af13a6850d637f8f6b376e5f3b2b8164f835de2de6b83d628a13f
         // line 14
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("review_status_review");
         echo "\">Reviews for status review</a></li>
+            <li><a href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("coffee_new");
+        echo "\">Create a Coffee</a></li>
+            <li><a href=\"";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("member_coffee_list");
+        echo "\">View My Coffees</a></li>
+            <li><a href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getUrl("member_review_list");
+        echo "\">View My Reviews</a></li>
         </ul>
     </div>
 ";
@@ -113,7 +125,7 @@ class __TwigTemplate_50bcc1af13a6850d637f8f6b376e5f3b2b8164f835de2de6b83d628a13f
 
     public function getDebugInfo()
     {
-        return array (  91 => 14,  87 => 13,  83 => 12,  79 => 11,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
+        return array (  103 => 17,  99 => 16,  95 => 15,  91 => 14,  87 => 13,  83 => 12,  79 => 11,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -132,6 +144,9 @@ class __TwigTemplate_50bcc1af13a6850d637f8f6b376e5f3b2b8164f835de2de6b83d628a13f
             <li><a href=\"{{ url('member_list') }}\">Member list</a></li>
             <li><a href=\"{{ url('coffee_status_review') }}\">Coffees for status review</a></li>
             <li><a href=\"{{ url('review_status_review') }}\">Reviews for status review</a></li>
+            <li><a href=\"{{ url('coffee_new') }}\">Create a Coffee</a></li>
+            <li><a href=\"{{ url('member_coffee_list') }}\">View My Coffees</a></li>
+            <li><a href=\"{{ url('member_review_list') }}\">View My Reviews</a></li>
         </ul>
     </div>
 {% endblock %}", "admin/admin_panel.html.twig", "D:\\ITB\\Year3\\sem2\\php\\coffee-paradise\\templates\\admin\\admin_panel.html.twig");

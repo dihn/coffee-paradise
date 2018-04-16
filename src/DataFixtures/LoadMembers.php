@@ -33,15 +33,17 @@ class LoadMembers extends Fixture
      */
     public function load(ObjectManager $manager)
     {
-        $memberUser = $this->createMember('user', 'user');
-        $memberAdmin = $this->createMember('admin', 'admin', ['ROLE_ADMIN']);
-        $memberEoghan = $this->createMember('eoghan', 'debhal', ['ROLE_SUPER_ADMIN']);
-        $memberEddy = $this->createMember('eddy', 'eddy', ['ROLE_MEMBER']);
+        $memberTom = $this->createMember('tom', 'tompass', ['ROLE_MEMBER']);
+        $memberSarah = $this->createMember('sarah', 'sarahpass', ['ROLE_MEMBER']);
+        $memberEoghan = $this->createMember('eoghan', 'eoghanpass', ['ROLE_SUPER_ADMIN']);
+        $memberEddy = $this->createMember('eddy', 'eddypass', ['ROLE_MEMBER']);
+        $memberJohn = $this->createMember('john', 'johnpass', ['ROLE_MEMBER']);
 
-        $manager->persist($memberUser);
-        $manager->persist($memberAdmin);
+        $manager->persist($memberTom);
+        $manager->persist($memberSarah);
         $manager->persist($memberEoghan);
         $manager->persist($memberEddy);
+        $manager->persist($memberJohn);
 
         $manager->flush();
     }

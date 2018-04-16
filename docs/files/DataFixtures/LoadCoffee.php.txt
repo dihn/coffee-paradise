@@ -28,43 +28,43 @@ class LoadCoffee extends Fixture
     {
         $coffee1 = $this->createCoffee('public','Eoghan','Dragonfly Coffee Roasters', 'An exquisitely composed Yemen coffee,
          almost other-worldly in its array of fruit and floral notes, all enveloped in a crisp chocolate.',
-            'images/dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
+            'dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
              Aromatic orchid, candied ginger, frankincense, Concord grape, roasted cacao nib in aroma and cup.',
             'ingredient 1, ingredient 2, ingredient 3', 99.67);
 
         $coffee2 = $this->createCoffee('public','Eddy','Dragonfly Coffee Roasters', 'An exquisitely composed Yemen coffee,
          almost other-worldly in its array of fruit and floral notes, all enveloped in a crisp chocolate.',
-            'images/dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
+            'dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
              Aromatic orchid, candied ginger, frankincense, Concord grape, roasted cacao nib in aroma and cup.',
             'ingredient 1, ingredient 2, ingredient 3', 85.67);
 
         $coffee3 = $this->createCoffee('public','Eoghan','Dragonfly Coffee Roasters', 'An exquisitely composed Yemen coffee,
          almost other-worldly in its array of fruit and floral notes, all enveloped in a crisp chocolate.',
-            'images/dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
+            'dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
              Aromatic orchid, candied ginger, frankincense, Concord grape, roasted cacao nib in aroma and cup.',
             'ingredient 1, ingredient 2, ingredient 3', 45.62);
 
         $coffee4 = $this->createCoffee('public','Eddy','Dragonfly Coffee Roasters', 'An exquisitely composed Yemen coffee,
          almost other-worldly in its array of fruit and floral notes, all enveloped in a crisp chocolate.',
-            'images/dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
+            'dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
              Aromatic orchid, candied ginger, frankincense, Concord grape, roasted cacao nib in aroma and cup.',
             'ingredient 1, ingredient 2, ingredient 3', 20.67);
 
         $coffee5 = $this->createCoffee('public','Eoghan','Dragonfly Coffee Roasters', 'An exquisitely composed Yemen coffee,
          almost other-worldly in its array of fruit and floral notes, all enveloped in a crisp chocolate.',
-            'images/dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
+            'dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
              Aromatic orchid, candied ginger, frankincense, Concord grape, roasted cacao nib in aroma and cup.',
             'ingredient 1, ingredient 2, ingredient 3', 10.67);
 
         $coffee6 = $this->createCoffee('private','Eddy','Dragonfly Coffee Roasters', 'An exquisitely composed Yemen coffee,
          almost other-worldly in its array of fruit and floral notes, all enveloped in a crisp chocolate.',
-            'images/dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
+            'dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
              Aromatic orchid, candied ginger, frankincense, Concord grape, roasted cacao nib in aroma and cup.',
             'ingredient 1, ingredient 2, ingredient 3', 5.67);
 
         $coffee7 = $this->createCoffee('public','Eoghan','Dragonfly Coffee Roasters', 'An exquisitely composed Yemen coffee,
          almost other-worldly in its array of fruit and floral notes, all enveloped in a crisp chocolate.',
-            'images/dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
+            'dragonFly.png', 'Intricately layered, sweetly tart, harmoniously composed.
              Aromatic orchid, candied ginger, frankincense, Concord grape, roasted cacao nib in aroma and cup.',
             'ingredient 1, ingredient 2, ingredient 3', 85.67);
 

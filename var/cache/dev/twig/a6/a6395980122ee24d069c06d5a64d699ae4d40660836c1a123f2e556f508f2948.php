@@ -84,7 +84,7 @@ class __TwigTemplate_1e0865effa8a10e3f203a19a897b3479b200beebf1a64d3d9e9e7891ec4
         foreach ($context['_seq'] as $context["_key"] => $context["coffee"]) {
             // line 14
             echo "                ";
-            if ((twig_get_attribute($this->env, $this->source, $context["coffee"], "author", array()) == "eddy")) {
+            if ((twig_lower_filter($this->env, twig_get_attribute($this->env, $this->source, $context["coffee"], "author", array())) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 14, $this->source); })()), "user", array()), "username", array()))) {
                 // line 15
                 echo "                    <div class=\"col-lg-6 col-md-3 col-sm-6 col-xs-12\">
                         <div class=\"thumbnail\">
@@ -187,7 +187,7 @@ class __TwigTemplate_1e0865effa8a10e3f203a19a897b3479b200beebf1a64d3d9e9e7891ec4
         <div class=\"row\">
 
             {% for coffee in coffees %}
-                {% if coffee.author == 'eddy' %}
+                {% if (coffee.author|lower == app.user.username) %}
                     <div class=\"col-lg-6 col-md-3 col-sm-6 col-xs-12\">
                         <div class=\"thumbnail\">
                             <img src=\"/images/{{ coffee.image }}\" class=\"img-thumbnail\"/>

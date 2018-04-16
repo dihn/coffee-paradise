@@ -81,8 +81,8 @@ class __TwigTemplate_3625cb9e121d5c7e6731c3c29b9019b58ed7ca12a6106efc633534c73a0
         echo "
         <a href=\"";
         // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("review_index");
-        echo "\">back to list</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("coffee_index");
+        echo "\">back to coffee list</a>
 
         ";
         // line 15
@@ -129,7 +129,7 @@ class __TwigTemplate_3625cb9e121d5c7e6731c3c29b9019b58ed7ca12a6106efc633534c73a0
 
         {% include 'review/_form.html.twig' with {'form': form, 'button_label': 'Edit'} only %}
 
-        <a href=\"{{ path('review_index') }}\">back to list</a>
+        <a href=\"{{ path('coffee_index') }}\">back to coffee list</a>
 
         {% include 'review/_delete_form.html.twig' with {'identifier': review.id} only %}
 

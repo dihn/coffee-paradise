@@ -44,6 +44,7 @@ class AdminController extends Controller {
     }
 
     /**
+     * Lists the coffees for admin to view status'
      * @Route("/admin/coffees", name="coffee_status_review")
      */
 
@@ -60,6 +61,7 @@ class AdminController extends Controller {
     }// end listAction()
 
     /**
+     * Lists the coffees for admin to view reviews status'
      * @Route("/admin/reviews", name="review_status_review")
      */
 

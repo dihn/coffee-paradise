@@ -11,7 +11,7 @@
         <div class="row">
 
             {% for coffee in coffees %}
-                {% if coffee.author == 'eddy' %}
+                {% if (coffee.author|lower == app.user.username) %}
                     <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
                         <div class="thumbnail">
                             <img src="/images/{{ coffee.image }}" class="img-thumbnail"/>

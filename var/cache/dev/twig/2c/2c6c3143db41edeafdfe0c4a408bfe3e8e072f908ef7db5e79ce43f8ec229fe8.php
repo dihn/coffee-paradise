@@ -74,54 +74,48 @@ class __TwigTemplate_f0e15317e9feb3e0aec668c351e3796f93067cb0c3c9a7420861094965b
 
         <h1>Coffee</h1>
 
+    <div class=\"col-lg-6 col-md-3 col-sm-6 col-xs-12\">
         <table>
             <tr>
-                <th>Id</th>
-                <td>";
-        // line 14
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 14, $this->source); })()), "id", array()), "html", null, true);
-        echo "</td>
+
+                <td><img src=\"/images/";
+        // line 15
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 15, $this->source); })()), "image", array()), "html", null, true);
+        echo "\" class=\"img-thumbnail\"/></td>
             </tr>
             <tr>
                 <th>Title</th>
                 <td>";
-        // line 18
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 18, $this->source); })()), "title", array()), "html", null, true);
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 19, $this->source); })()), "title", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Summary</th>
                 <td>";
-        // line 22
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 22, $this->source); })()), "summary", array()), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>";
-        // line 26
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 26, $this->source); })()), "image", array()), "html", null, true);
+        // line 23
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 23, $this->source); })()), "summary", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>";
-        // line 30
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 30, $this->source); })()), "description", array()), "html", null, true);
+        // line 27
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 27, $this->source); })()), "description", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>IngredientsList</th>
                 <td>";
-        // line 34
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 34, $this->source); })()), "ingredientsList", array()), "html", null, true);
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 31, $this->source); })()), "ingredientsList", array()), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>PriceRange</th>
                 <td>";
-        // line 38
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 38, $this->source); })()), "priceRange", array()), "html", null, true);
+        // line 35
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 35, $this->source); })()), "priceRange", array()), "html", null, true);
         echo "</td>
             </tr>
 
@@ -129,17 +123,17 @@ class __TwigTemplate_f0e15317e9feb3e0aec668c351e3796f93067cb0c3c9a7420861094965b
                 <th>Reviews</th>
                 <td>
                     ";
-        // line 44
+        // line 41
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 45
+            // line 42
             echo "
                         ";
-            // line 46
+            // line 43
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 46, $this->source); })()), "reviews", array()));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 43, $this->source); })()), "reviews", array()));
             $context['_iterated'] = false;
             foreach ($context['_seq'] as $context["_key"] => $context["review"]) {
-                // line 47
+                // line 44
                 echo "                            ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["review"], "author", array()), "html", null, true);
                 echo " :: ";
@@ -152,24 +146,24 @@ class __TwigTemplate_f0e15317e9feb3e0aec668c351e3796f93067cb0c3c9a7420861094965b
                 $context['_iterated'] = true;
             }
             if (!$context['_iterated']) {
-                // line 50
+                // line 47
                 echo "                            (no reviews for this Coffee)
                         ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['review'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 52
+            // line 49
             echo "
                         ";
         } else {
-            // line 54
+            // line 51
             echo "                            ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 54, $this->source); })()), "reviews", array()));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 51, $this->source); })()), "reviews", array()));
             $context['_iterated'] = false;
             foreach ($context['_seq'] as $context["_key"] => $context["review"]) {
-                // line 55
+                // line 52
                 echo "                                ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["review"], "summary", array()), "html", null, true);
                 echo " :: ";
@@ -180,50 +174,52 @@ class __TwigTemplate_f0e15317e9feb3e0aec668c351e3796f93067cb0c3c9a7420861094965b
                 $context['_iterated'] = true;
             }
             if (!$context['_iterated']) {
-                // line 58
+                // line 55
                 echo "                                (no reviews for this Coffee)
                             ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['review'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 60
+            // line 57
             echo "                    ";
         }
-        // line 61
+        // line 58
         echo "                </td>
             </tr>
 
 
         </table>
 
+    </div>
+
         <a href=\"";
-        // line 67
+        // line 66
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("coffee_index");
         echo "\">Back to Coffees</a>
 
         ";
-        // line 69
+        // line 68
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 70
+            // line 69
             echo "
             <a href=\"";
-            // line 71
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("review_new", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 71, $this->source); })()), "id", array()))), "html", null, true);
+            // line 70
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("review_new", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 70, $this->source); })()), "id", array()))), "html", null, true);
             echo "\">Add Review</a>
 
             <a href=\"";
-            // line 73
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("coffee_edit", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 73, $this->source); })()), "id", array()))), "html", null, true);
+            // line 72
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("coffee_edit", array("id" => twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 72, $this->source); })()), "id", array()))), "html", null, true);
             echo "\">Edit</a>
 
             ";
+            // line 74
+            $this->loadTemplate("coffee/_delete_form.html.twig", "coffee/show.html.twig", 74)->display(array("identifier" => twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 74, $this->source); })()), "id", array())));
             // line 75
-            $this->loadTemplate("coffee/_delete_form.html.twig", "coffee/show.html.twig", 75)->display(array("identifier" => twig_get_attribute($this->env, $this->source, (isset($context["coffee"]) || array_key_exists("coffee", $context) ? $context["coffee"] : (function () { throw new Twig_Error_Runtime('Variable "coffee" does not exist.', 75, $this->source); })()), "id", array())));
-            // line 76
             echo "        ";
         }
-        // line 77
+        // line 76
         echo "
 
 
@@ -250,7 +246,7 @@ class __TwigTemplate_f0e15317e9feb3e0aec668c351e3796f93067cb0c3c9a7420861094965b
 
     public function getDebugInfo()
     {
-        return array (  227 => 77,  224 => 76,  222 => 75,  217 => 73,  212 => 71,  209 => 70,  207 => 69,  202 => 67,  194 => 61,  191 => 60,  184 => 58,  173 => 55,  167 => 54,  163 => 52,  156 => 50,  143 => 47,  138 => 46,  135 => 45,  133 => 44,  124 => 38,  117 => 34,  110 => 30,  103 => 26,  96 => 22,  89 => 18,  82 => 14,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
+        return array (  223 => 76,  220 => 75,  218 => 74,  213 => 72,  208 => 70,  205 => 69,  203 => 68,  198 => 66,  188 => 58,  185 => 57,  178 => 55,  167 => 52,  161 => 51,  157 => 49,  150 => 47,  137 => 44,  132 => 43,  129 => 42,  127 => 41,  118 => 35,  111 => 31,  104 => 27,  97 => 23,  90 => 19,  83 => 15,  72 => 6,  63 => 5,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -265,10 +261,11 @@ class __TwigTemplate_f0e15317e9feb3e0aec668c351e3796f93067cb0c3c9a7420861094965b
 
         <h1>Coffee</h1>
 
+    <div class=\"col-lg-6 col-md-3 col-sm-6 col-xs-12\">
         <table>
             <tr>
-                <th>Id</th>
-                <td>{{ coffee.id }}</td>
+
+                <td><img src=\"/images/{{ coffee.image }}\" class=\"img-thumbnail\"/></td>
             </tr>
             <tr>
                 <th>Title</th>
@@ -277,10 +274,6 @@ class __TwigTemplate_f0e15317e9feb3e0aec668c351e3796f93067cb0c3c9a7420861094965b
             <tr>
                 <th>Summary</th>
                 <td>{{ coffee.summary }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ coffee.image }}</td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -320,6 +313,8 @@ class __TwigTemplate_f0e15317e9feb3e0aec668c351e3796f93067cb0c3c9a7420861094965b
 
 
         </table>
+
+    </div>
 
         <a href=\"{{ path('coffee_index') }}\">Back to Coffees</a>
 

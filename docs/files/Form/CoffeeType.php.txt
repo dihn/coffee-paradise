@@ -9,6 +9,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Creates the coffee form
@@ -27,8 +29,13 @@ class CoffeeType extends AbstractType
         $builder
             ->add('status')
             ->add('title')
+            ->add('author')
             ->add('summary')
-            ->add('image')
+            ->add('image', FileType::class, [
+                'label'=>'Coffee',
+                'data_class' => null,
+                'required' => false
+            ])
             ->add('description')
             ->add('ingredientsList')
             ->add('priceRange')

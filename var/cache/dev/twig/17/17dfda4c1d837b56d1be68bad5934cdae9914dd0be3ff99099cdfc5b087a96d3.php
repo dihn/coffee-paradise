@@ -84,7 +84,7 @@ class __TwigTemplate_b3e5d3d818f94f6011ca1b0622c6a36f7d740d2efdf478e501aa714f2ad
         foreach ($context['_seq'] as $context["_key"] => $context["review"]) {
             // line 14
             echo "                ";
-            if ((twig_get_attribute($this->env, $this->source, $context["review"], "author", array()) == "eddy")) {
+            if ((twig_lower_filter($this->env, twig_get_attribute($this->env, $this->source, $context["review"], "author", array())) == twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new Twig_Error_Runtime('Variable "app" does not exist.', 14, $this->source); })()), "user", array()), "username", array()))) {
                 // line 15
                 echo "                    <div class=\"col-lg-6 col-md-3 col-sm-6 col-xs-12\">
                         <p>";
@@ -164,7 +164,7 @@ class __TwigTemplate_b3e5d3d818f94f6011ca1b0622c6a36f7d740d2efdf478e501aa714f2ad
         <div class=\"row\">
 
             {% for review in reviews %}
-                {% if review.author == 'eddy' %}
+                {% if (review.author|lower == app.user.username) %}
                     <div class=\"col-lg-6 col-md-3 col-sm-6 col-xs-12\">
                         <p>{{ review.status }}</p>
                         <p>{{ review.author }}</p>

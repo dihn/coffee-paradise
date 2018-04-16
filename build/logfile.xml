@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites/>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="1" assertions="1" errors="0" failures="1" skipped="0" time="13.315480">
+    <testsuite name="App\Tests\Controller\DefaultControllerTest" file="D:\ITB\Year3\sem2\php\CoffeeParadise\tests\Controller\DefaultControllerTest.php" tests="1" assertions="1" errors="0" failures="1" skipped="0" time="13.315480">
+      <testcase name="testHomePageStatusOkay" class="App\Tests\Controller\DefaultControllerTest" classname="App.Tests.Controller.DefaultControllerTest" file="D:\ITB\Year3\sem2\php\CoffeeParadise\tests\Controller\DefaultControllerTest.php" line="23" assertions="1" time="13.315480">
+        <failure type="PHPUnit\Framework\ExpectationFailedException">App\Tests\Controller\DefaultControllerTest::testHomePageStatusOkay
+Failed asserting that 500 is identical to 200.
+
+D:\ITB\Year3\sem2\php\CoffeeParadise\tests\Controller\DefaultControllerTest.php:35
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

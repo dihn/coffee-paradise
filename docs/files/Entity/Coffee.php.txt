@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 
 /**
@@ -47,7 +49,16 @@ class Coffee
 
     /**
      * Stores the image of the coffee
+     *
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Please upload a coffee image")
+     * @Assert\File(maxSize="10M",
+     *     mimeTypes={
+     *     "image/png",
+     *     "image/jpeg",
+     *     "image/jpg",
+     *     "image/gif"
+     *      })
      */
     private $image;
 
@@ -235,6 +246,7 @@ class Coffee
     /**
      * Create reviews relationship
      * @ORM\OneToMany(targetEntity="App\Entity\Review", mappedBy="coffee")
+     *
      */
     private $reviews;
 
